@@ -1,0 +1,58 @@
+#newts-sleep-sched-page {
+  width: 100%;
+  text-align: center;
+}
+
+#newts-sleep-sched-page td {
+  vertical-align: text-top;
+}
+
+#newts-sleep-sched-page p {
+  display: inline-block;
+  margin: 0;
+}
+
+#newts-sleep-sched-page table {
+  margin: auto;
+}
+
+#newts-sleep-sched-page .adult-row {
+  background-color: darkgrey;
+}
+
+#newts-sleep-sched-page h1,
+#newts-sleep-sched-page h2,
+#newts-sleep-sched-page h3,
+#newts-sleep-sched-page h4,
+#newts-sleep-sched-page h5,
+#newts-sleep-sched-page h6 {
+  text-align: center;
+  margin: 0.2em;
+}
+
+fieldset.nss-fieldset {
+  min-width: 400px;
+  display: inline-block;
+  border: 4px dashed silver;
+  padding: 0 1em 1em 1em;
+  margin: 0 auto 1em;
+}
+legend {
+  font-style: italic;
+}
+
+#newts-sleep-sched-page input[type='number'],
+#newts-sleep-sched-page .wdc-cost {
+  width: 3em;
+  margin-bottom: 0.75em;
+}
+
+span.wdc-tip {
+  color: darkgrey;
+}
+
+#newtynewt {
+  background-image: url('newtynewt.png');
+  width: 195px;
+  height: 125px;
+}

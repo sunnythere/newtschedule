@@ -7,6 +7,16 @@
   vertical-align: text-top;
 }
 
+#heading_row {
+  padding: 1em;
+}
+
+#heading_input {
+  font-family: "Judson", serif;
+  font-size: 26px;
+  text-align: center;
+}
+
 #newts-sleep-sched-page p {
   display: inline-block;
   margin: 0;
@@ -41,8 +51,7 @@ legend {
   font-style: italic;
 }
 
-#newts-sleep-sched-page input[type='number'],
-#newts-sleep-sched-page .wdc-cost {
+#newts-sleep-sched-page input[type='number'] {
   width: 3em;
   margin-bottom: 0.75em;
 }

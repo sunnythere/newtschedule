@@ -16,13 +16,26 @@
     </legend>
 
     <table>
-        <tr>
-            <th></th>
-            <th>open</th>
-            <th>close</th>
-            <th>adult-only?</th>
-        </tr>
 
+        <?php
+            $season_val = $newts_sched_arr[ 'nss_season' ]
+                ? esc_attr( $newts_sched_arr[ 'nss_season' ] )
+                : '';
+            echo(
+            '<tr>
+                <th id="heading_row" colspan="4">
+                    <h5>heading (i.e., Summer Hours, Fall Schedule, etc.)</h5>
+                    <input id="heading_input" type="text" name="nss_season" value="' . $season_val . '" />
+                </th>
+            </tr>');
+        ?>
+
+        <tr>
+            <td></td>
+            <td>open</td>
+            <td>close</td>
+            <td>adult-only?</td>
+        </tr>
 
       <?php
 
@@ -33,9 +46,9 @@
             $time_val1 = isset( $newts_sched_arr['nss_' . $day . '_' . $idx ][1] )
                 ? esc_attr( $newts_sched_arr['nss_' . $day . '_' . $idx ][1] )
                 : null;
-            $adult_only = $newts_sched_ad_arr['nss_' . $day . '_' . $idx] && $newts_sched_ad_arr['nss_' . $day . '_' . $idx][0]
+            $adult_only = $newts_sched_ad_arr['nss_' . $day . '_' . $idx]
                 ? 1
-                : null;
+                : 0;
             $time_val2 = isset( $newts_sched_ad_arr['nss_' . $day . '_' . $idx ][1] )
                 ? esc_attr( $newts_sched_ad_arr['nss_' . $day . '_' . $idx][1] )
                 : null;
@@ -52,12 +65,12 @@
                 : '';
 
           echo(
-            '<tr><td>' . $day . ':</td>
+            '<tr class="hour-row"><td>' . $day . ':</td>
                 <td><input type="time" name="' . $day . '_' . $idx . '_0" value="' .
                 $time_val0 . '" /></td>
                 <td><input type="time" name="' . $day . '_' . $idx . '_1" value="' .
                 $time_val1 . '" /></td>
-                <td><input type="checkbox" name="' . $day . '_' . $idx . '_ad" value="1"' .
+                <td><input type="checkbox" class="ad-check" id="' . $idx . '_check" name="' . $idx . '_ad" value="1"' .
                     checked( $adult_only, 1, false ) .'/></td>
             </tr>' . $adult_row);
         }

@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 if ( !class_exists( 'Newts_Sleep_Sched' ) ) {
 
@@ -8,7 +8,7 @@ class Newts_Sleep_Sched {
 
     public function __construct() {
       $this->plugin_slug = 'newts_sl_sch';
-      $this->version = '1.9.0';
+      $this->version = '2.0.0';
     }
 
     public function get_version() {
@@ -34,10 +34,12 @@ class Newts_Sleep_Sched {
 
       add_action( 'admin_init', array($this, 'upgrade_check' ) );
       add_action( 'admin_menu', array($newts_sleep_sched, 'add_menu_page' ) );
+      add_action( 'admin_footer', array($newts_sleep_sched, 'show_ad_only_row') );
       add_action( 'admin_enqueue_scripts', array($newts_sleep_sched, 'enqueue_styles' ) );
+      add_action( 'wp_ajax_check_adhrs_row', array( $newts_sleep_sched, 'check_adhrs_row') );
 
       add_action( 'admin_post_nss_hours_hook', array($newts_sleep_sched, 'process_settings' ) );
-      add_action('rest_api_init', array($newts_sleep_sched, 'rest_register') );
+      add_action( 'rest_api_init', array($newts_sleep_sched, 'rest_register') );
     }
 }
 

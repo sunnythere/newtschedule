@@ -177,7 +177,7 @@ class Page_Sleep_Sched {
                 }
 
                 if ( isset ( $_POST[ $idx . '_ad' ] ) ) {
-                    $updated_schedule_ad['nss_' .$key . '_' . $idx][0] = sanitize_text_field( $_POST[ $key . '_' . $idx . '_ad' ] );
+                    $updated_schedule_ad['nss_' .$key . '_' . $idx][0] = '1';
                 }
                 if ( isset ( $_POST[ $key . '_' . $idx . '_2' ] ) && isset ( $_POST[ $key . '_' . $idx . '_3' ] ) ) {
                     $updated_schedule_ad['nss_' . $key . '_' . $idx][1] = sanitize_text_field( $_POST[ $key . '_' . $idx . '_2' ] );

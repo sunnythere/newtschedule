@@ -2,7 +2,7 @@
 /*
 *
 Plugin Name: Newt's Sleep Schedule
-Description: Princess Newton needs her beauty sleep. Set the cafe business hours so that people can see her official visiting hours.
+Description: Princess Newton needs her beauty sleep. Set the cafe's open/close days and times so that people can see her official visiting hours.
 Version: 2.0.0
 Author: Y.Alice
 Author URI: https://github.com/sunnythere

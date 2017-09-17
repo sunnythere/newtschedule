@@ -46,7 +46,7 @@
             $time_val1 = isset( $newts_sched_arr['nss_' . $day . '_' . $idx ][1] )
                 ? esc_attr( $newts_sched_arr['nss_' . $day . '_' . $idx ][1] )
                 : null;
-            $adult_only = $newts_sched_ad_arr['nss_' . $day . '_' . $idx]
+            $adult_only = $newts_sched_ad_arr['nss_' . $day . '_' . $idx][0]
                 ? 1
                 : 0;
             $time_val2 = isset( $newts_sched_ad_arr['nss_' . $day . '_' . $idx ][1] )
